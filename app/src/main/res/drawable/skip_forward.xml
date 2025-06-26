@@ -1,0 +1,102 @@
+<!-- res/drawable/ic_skip_animated.xml -->
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <!-- Estado normal -->
+  <item android:id="@+id/normal_state">
+    <vector android:height="24dp"
+        android:width="24dp"
+        android:viewportWidth="24"
+        android:viewportHeight="24">
+      <path
+          android:fillColor="#2196F3"
+          android:pathData="M8,5v14l11-7z"/>
+      <path
+          android:fillColor="#2196F3"
+          android:pathData="M20,5h2v14h-2z"/>
+    </vector>
+  </item>
+
+  <!-- Estado pressionado -->
+  <item android:id="@+id/pressed_state">
+    <vector android:height="24dp"
+        android:width="24dp"
+        android:viewportWidth="24"
+        android:viewportHeight="24">
+      <path
+          android:fillColor="#FF5722"
+          android:pathData="M8,5v14l11-7z"/>
+      <path
+          android:fillColor="#FF5722"
+          android:pathData="M20,5h2v14h-2z"/>
+    </vector>
+  </item>
+
+  <!-- Animação de transição (pressionar) -->
+  <transition
+      android:fromId="@id/normal_state"
+      android:toId="@id/pressed_state">
+    <animation-list android:oneshot="false">
+      <item android:duration="80">
+        <vector android:height="24dp"
+            android:width="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+          <path
+              android:fillColor="#FF9800"
+              android:pathData="M8,7v10l9-5z"/>
+          <path
+              android:fillColor="#FF9800"
+              android:pathData="M20,7h2v10h-2z"/>
+        </vector>
+      </item>
+      <item android:duration="80">
+        <vector android:height="24dp"
+            android:width="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+          <path
+              android:fillColor="#FF5722"
+              android:pathData="M8,5v14l11-7z"/>
+          <path
+              android:fillColor="#FF5722"
+              android:pathData="M20,5h2v14h-2z"/>
+        </vector>
+      </item>
+    </animation-list>
+  </transition>
+
+  <!-- Animação de transição (soltar) -->
+  <transition
+      android:fromId="@id/pressed_state"
+      android:toId="@id/normal_state">
+    <animation-list android:oneshot="false">
+      <item android:duration="80">
+        <vector android:height="24dp"
+            android:width="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+          <path
+              android:fillColor="#FF9800"
+              android:pathData="M8,7v10l9-5z"/>
+          <path
+              android:fillColor="#FF9800"
+              android:pathData="M20,7h2v10h-2z"/>
+        </vector>
+      </item>
+      <item android:duration="80">
+        <vector android:height="24dp"
+            android:width="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+          <path
+              android:fillColor="#2196F3"
+              android:pathData="M8,5v14l11-7z"/>
+          <path
+              android:fillColor="#2196F3"
+              android:pathData="M20,5h2v14h-2z"/>
+        </vector>
+      </item>
+    </animation-list>
+  </transition>
+
+</animated-selector>

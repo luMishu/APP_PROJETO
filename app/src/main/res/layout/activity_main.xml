@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/bg_nature_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Cabeçalho -->
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@mipmap/ic_logo_app"
+            android:contentDescription="@string/app_logo"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_title"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/subtitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_subtitle"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Botão Iniciar (visível apenas no início) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botao_iniciar"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/start_game"
+            android:textSize="18sp"
+            android:layout_marginBottom="24dp"
+            app:strokeColor="@color/green_light"
+            app:strokeWidth="2dp"
+            android:textColor="@color/white"
+            app:icon="@drawable/play"
+            app:iconTintMode="src_atop"
+            app:iconTint="@color/white"/>
+
+        <!-- Container do Quiz (inicialmente invisível) -->
+        <LinearLayout
+            android:id="@+id/quiz_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- Pergunta -->
+            <TextView
+                android:id="@+id/pergunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"
+                android:padding="8dp"
+                android:background="@drawable/bg_question_box"/>
+
+            <!-- Respostas -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/resposta1"
+                style="@style/AnswerButtonStyle"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Repetir para outras 3 respostas (resposta2, resposta3, resposta4) -->
+
+            <!-- Status do Jogo -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/pontuacao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/score_template"
+                    android:textSize="16sp"
+                    android:textColor="@color/green_light"
+                    android:layout_marginEnd="16dp"/>
+
+                <TextView
+                    android:id="@+id/erros"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/errors_template"
+                    android:textSize="16sp"
+                    android:textColor="@color/red_error"/>
+            </LinearLayout>
+
+            <!-- Power-ups -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:gravity="center">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/botao_pular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/skip_forward"
+                    app:iconTintMode="src_atop"
+                    android:text="Pular"/>
+
+                <!-- Adicionar outros power-ups -->
+            </LinearLayout>
+
+            <!-- Medalhas -->
+            <TextView
+                android:id="@+id/medalhas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/medals_template"
+                android:textSize="16sp"
+                android:textColor="@color/gold"
+                android:gravity="center"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

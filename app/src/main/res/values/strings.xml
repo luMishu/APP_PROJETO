@@ -1,0 +1,21 @@
+<resources>
+    <!-- Nome do aplicativo -->
+    <string name="app_name">Quiz da Natureza</string>
+
+    <!-- Descrição da imagem do logo -->
+    <string name="app_logo">Logo do Aplicativo</string>
+
+    <!-- Texto do botão para iniciar o quiz -->
+    <string name="start_quiz">Iniciar Quiz</string>
+    <string name="welcome_title">Bem-vindo ao Quiz da Natureza! 🌱</string>
+    <!-- Texto do botão de conquistas -->
+    <string name="achievements">Conquistas</string>
+    <string name="welcome_subtitle">Teste seus conhecimentos sobre fauna e flora!</string>
+    <!-- Texto para o recorde -->
+    <string name="start_game">Iniciar Quiz</string>
+    <string name="score_template">Pontuação: %1$d</string>
+    <string name="errors_template">Erros: %1$d/3</string>
+    <string name="skip_question">Pular</string>
+    <string name="high_score">Recorde: </string>
+    <string name="medals_template">Medalhas: %1$s</string>
+</resources>

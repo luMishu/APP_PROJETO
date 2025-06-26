@@ -1,0 +1,48 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+
+  <aapt:attr name="android:drawable">
+    <vector
+        android:width="48dp"
+        android:height="48dp"
+        android:viewportWidth="24"
+        android:viewportHeight="24">
+      <path
+          android:name="play_triangle"
+          android:fillColor="#4CAF50"
+          android:pathData="M8,5v14l11-7z"/>
+    </vector>
+  </aapt:attr>
+
+  <target android:name="play_triangle">
+    <aapt:attr name="android:animation">
+      <set>
+        <!-- Animação de pulsação -->
+        <objectAnimator
+            android:propertyName="scaleX"
+            android:duration="800"
+            android:valueFrom="1"
+            android:valueTo="1.1"
+            android:repeatMode="reverse"
+            android:repeatCount="infinite"/>
+        <objectAnimator
+            android:propertyName="scaleY"
+            android:duration="800"
+            android:valueFrom="1"
+            android:valueTo="1.1"
+            android:repeatMode="reverse"
+            android:repeatCount="infinite"/>
+
+        <!-- Animação de cor -->
+        <objectAnimator
+            android:propertyName="fillColor"
+            android:duration="1000"
+            android:valueFrom="#4CAF50"
+            android:valueTo="#81C784"
+            android:repeatMode="reverse"
+            android:repeatCount="infinite"
+            android:valueType="colorType"/>
+      </set>
+    </aapt:attr>
+  </target>
+</animated-vector>
