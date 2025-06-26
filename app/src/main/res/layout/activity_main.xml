@@ -14,7 +14,6 @@
         android:padding="24dp"
         android:gravity="center_horizontal">
 
-        <!-- Cabeçalho -->
         <ImageView
             android:layout_width="120dp"
             android:layout_height="120dp"
@@ -42,7 +41,6 @@
             android:gravity="center"
             android:layout_marginBottom="24dp"/>
 
-        <!-- Botão Iniciar (visível apenas no início) -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/botao_iniciar"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
@@ -58,7 +56,7 @@
             app:iconTintMode="src_atop"
             app:iconTint="@color/white"/>
 
-        <!-- Container do Quiz (inicialmente invisível) -->
+       
         <LinearLayout
             android:id="@+id/quiz_container"
             android:layout_width="match_parent"
@@ -66,7 +64,7 @@
             android:orientation="vertical"
             android:visibility="gone">
 
-            <!-- Pergunta -->
+      
             <TextView
                 android:id="@+id/pergunta"
                 android:layout_width="match_parent"
@@ -137,10 +135,8 @@
                     app:iconTintMode="src_atop"
                     android:text="Pular"/>
 
-                <!-- Adicionar outros power-ups -->
             </LinearLayout>
 
-            <!-- Medalhas -->
             <TextView
                 android:id="@+id/medalhas"
                 android:layout_width="match_parent"
